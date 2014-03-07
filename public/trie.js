@@ -42,13 +42,11 @@ Trie.prototype.getWords = function(words, currentWord){
   }
   
   for(var key in this.characters){
-    if(key){
-      return this.characters[key].getWords(words, currentWord + key);
-    }
-    else{
-      return words;
-    }
+    return this.characters[key].getWords(words, currentWord + key);
   }
+    
+  return words;
+
 };
 
 Trie.prototype.find = function(word){
@@ -82,3 +80,7 @@ Trie.prototype.autoComplete = function(prefix){
   // for a given prefix.
   // It should use find and getWords.
 };
+
+var t = new Trie();
+t.learn("beast");
+t.getWords();

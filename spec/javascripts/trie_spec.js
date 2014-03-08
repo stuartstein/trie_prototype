@@ -71,6 +71,12 @@ describe("Trie", function() {
       it("returns an empty array if there are no words", function(){
         expect(t.getWords()).toEqual([]);
       });
+      it("returns multiple children on different branches", function(){
+        t.learn("begin");
+        t.learn("best");
+        expect(t.getWords()
+          ).toEqual(["begin", "best"]);
+      });
     });
     describe(".autoComplete", function(){
       beforeEach(function(){

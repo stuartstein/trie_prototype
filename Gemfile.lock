@@ -39,6 +39,8 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    sinatra-handlebars (0.0.4)
+      sinatra
     sinatra-websocket (0.3.0)
       em-websocket (~> 0.3.6)
       eventmachine
@@ -58,5 +60,6 @@ DEPENDENCIES
   pry
   sinatra
   sinatra-contrib
+  sinatra-handlebars
   sinatra-websocket
   thin (= 1.6.2)
